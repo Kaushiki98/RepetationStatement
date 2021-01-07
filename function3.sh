@@ -11,8 +11,8 @@ do
 done
 echo "$n is a prime number"
 }
-prime
-echo $n
+#prime
+#echo $n
 palindrome() {
 s=0
 rev=""
@@ -30,12 +30,9 @@ else
 	echo "Number is not palindrome"
 fi
 }
+prime
+echo $n
 palindrome
 echo $n
 
-if [ $(prime) -eq $(palindrome) ]
-then
-	echo "the number is prime and palindrome"
-else
-	echo "the number is not prime and palindrome"
-fi
+

@@ -1,17 +1,17 @@
-#!/bin/bash
+#!/bin/bash -x
 echo "Enter a number: "
 read num
 while [ $(($num%2)) -eq 0 ]
 do
         num=$(( $num/2 ))
-        echo "$num"
+        #echo "$num"
 done
-for((i=3; i<=$(($num**2)); i=$i+2))
+for((i=3; i<=$(($num*2)); i=$i+2))
 do
         while [ $(($num%$i)) -eq 0 ]
         do
                 num=$(( $num/i ))
-                echo "$num "
+                #echo "$num "
         done
         if [ $num -gt 2 ]
         then

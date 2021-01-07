@@ -1,15 +1,21 @@
-#!/bin/bash -x
-head=1
-tail=0
-win=11
-count=1
+#!/bin/bash 
+#echo "enter head r tail: "
+let win=0
+let lose=0
+flip=11
+for ((i=1; i<=$flip; i++))
+do
+	val=$(($RANDOM%2))
+	echo "$val"
 
-flip=$(($RANDOM%2))
-	if [ $flip -eq $head ]
-		then
-			echo "winner"
-		else
-			echo "losser"
-		fi
-	(($count++))
+	if [ $val -eq 1 ]
+	then
+		win=$(($win+1))
+		echo "winner"
+		echo $win
+	else
+		lose=$(($lose+1))
+		echo "losser"
+		echo $lose
+	fi
 done
