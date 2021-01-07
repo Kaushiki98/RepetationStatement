@@ -16,5 +16,6 @@ do
         if [ $num -gt 2 ]
         then
                 echo "$num"
+	exit
         fi
 done
